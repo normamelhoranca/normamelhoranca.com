@@ -1,0 +1,23 @@
+---
+layout: page
+title: Cursos
+background: '/img/course.jpg'
+---
+<p>Abaixo você encontra os cursos desenvolvidos e ministrados por mim</p>
+
+<div class="card-columns">
+{% for curso in site.cursos %}
+
+<a href="{{ curso.url | prepend: site.baseurl | replace: '//', '/' }}">
+  <div class="card">
+    <img class="card-img-top" src="{{ curso.thumbnail }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ curso.title }}</h5>
+      <p class="card-text">{{ curso.excerpt | strip_html | truncatewords: 15 }}</p>
+      <p class="card-text"><small class="text-muted">{{ curso.date | date: '%B %d, %Y' }}<br/>{% include read_time.html content=curso.content %}</small></p>
+    </div>
+  </div>
+</a>
+
+{% endfor %}
+</div>

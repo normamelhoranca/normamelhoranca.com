@@ -1,0 +1,80 @@
+<!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          {% if site.email %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ site.email | encode_email }}">
+              <span class="fa-stack fa-sm">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.podcast %}
+          <li class="list-inline-item">
+            <a href="{{ site.podcast }}">
+              <span class="fa-stack fa-sm">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-podcast fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.facebook %}
+          <li class="list-inline-item">
+            <a href="{{ site.facebook }}">
+              <span class="fa-stack fa-sm">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.instagram %}
+          <li class="list-inline-item">
+            <a href="{{ site.instagram }}">
+              <span class="fa-stack fa-sm">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.youtube %}
+          <li class="list-inline-item">
+            <a href="{{ site.youtube }}">
+              <span class="fa-stack fa-sm">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          <li class="list-inline-item">
+            <a href="https://api.whatsapp.com/send?phone=5511987487554&text=Ol%C3%A1%20vi%20seu%20site%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es">
+            <span class="fa-stack fa-sm">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+          </span>
+          11 98748-7554</a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}. Todos os direitos reservados.</p>
+      </div>
+      <div class="col-lg col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+              Av. Paulista, 2073, Conjunto Nacional - Torre Horsa I, 10° andar, Sala 1013
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

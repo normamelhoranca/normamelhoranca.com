@@ -1,1 +1,63 @@
-Hi .com!
+---
+layout: home
+background: '/img/bg-home.png'
+---
+
+<!-- Norma -->
+<h3>Norma Melhorança</h3>
+<div class="row">
+    <div class="col">
+        <img class="rounded-circle float-left mr-4" src="/img/dra-norma.jpg" width="200" height="200">
+        Especialista em psicologia clínica desde 1984 CRP 06/31628, desenvolveu seu trabalho clínico em São Paulo, Cuiabá, Salvador e Curitiba com atendimento individual, casal e grupo. Hoje atende semanalmente no consultório em São Paulo.</br>
+        Cursou Psicologia Clínica pela Faculdade Tuiuti/Curitiba-PR/1984 e Pós-Graduação em Psicologia Social na PUC – PR/1986, curso que a habilitou a lidar e trabalhar com conteúdos psicológicos de grupos e instituições.</br>        
+    </div>
+</div>
+
+<!-- Cursos -->
+<div class="row mt-5">
+    <div class="col">
+        <h3>Cursos</h3>
+        <div class="card-columns">
+            {% for curso in site.cursos %}
+            
+            <a href="{{ curso.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <div class="card">
+                <img class="card-img-top" src="{{ curso.thumbnail }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ curso.title }}</h5>
+                    <p class="card-text">{{ curso.excerpt | strip_html | truncatewords: 15 }}</p>
+                    <p class="card-text"><small class="text-muted">{{ curso.date | date: '%B %d, %Y' }}<br/>{% include read_time.html content=curso.content %}</small></p>
+                </div>
+            </div>
+            </a>
+            
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- Post list
+<h3>Últimas do Blog</h3>
+<div class="card-columns">
+{% for post in site.posts limit : 3 %}
+
+<a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+<div class="card">
+    <svg class="bd-placeholder-img card-img-top" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+    <p class="card-text"><small class="text-muted">{{ post.date | date: '%B %d, %Y' }}<br/>{% include read_time.html content=post.content %}</small></p>
+    </div>
+</div>
+</a>
+
+{% endfor %}
+</div> -->
+
+<!-- Pager -->
+<!-- <div class="clearfix">
+    <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">Ver todos os posts &rarr;</a>
+</div> -->

@@ -1,0 +1,30 @@
+title:              Norma Melhorança
+email:              normamelhoranca@yahoo.com.br
+description:        Psicologia Clínica
+author:             Norma Melhorança
+baseurl:            ""
+url:                "https://normamelhoranca.com"
+
+# Social Profiles
+facebook:   https://www.facebook.com/normamelhoranca
+instagram:  https://instagram.com/normamelhoranca
+youtube:    https://youtube.com/normamelhoranca
+podcast:    https://bit.ly/PodcastNormaMelhoranca
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-173769843-1 # out your google-analytics code
+
+collections:
+  cursos:
+    output: true
+  podcast:
+    output: true
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
